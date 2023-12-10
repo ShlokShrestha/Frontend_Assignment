@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-level Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <div class="container-item">
+          <h2>Provide your information</h2>
+          <p>
+            Please fill the form below to receive a quote for your project.<br />
+            Feel free to add as much detail as needed.
+          </p>
+          <form action="#" class="form" >
+            <div class="progress-bar">
+              <div class="progress" id="progress"></div>
+              <div class="progress-step progress-step-active">1</div>
+              <div class="progress-step">2</div>
+              <div class="progress-step">3</div>
+              <div class="progress-step">4</div>
+            </div>
+            <div class="line"></div>
+
+            <!-- form-step -->
+            <div class="form-step form-step-active" id="step1">
+              <div class="title-text">
+                <h4>Personal Details</h4>
+              </div>
+              <div class="input-set-1">
+                <div class="input-group">
+                  <label for="name">Name</label>
+                  <div class="input-box">
+                    <input
+                      type="text"
+                      placeholder="Shlok Shrestha"
+                      id="name"
+                      required
+                    />
+                    <i class="fa-regular fa-user"></i>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="phoneno">Phone No</label>
+                  <div class="input-box">
+                    <input
+                      type="number"
+                      placeholder="+977-987654321"
+                      id="phoneno"
+                      required
+                    />
+
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="email">Email</label>
+                  <div class="input-box">
+                    <input
+                      type="email"
+                      placeholder="abc@gmail.com"
+                      id="email"
+                      required
+                      autocomplete="email"
+                      required
+                    />
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="password">Password</label>
+                  <div class="input-box">
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      id="password"
+                      required
+                      autocomplete="current-password"
+                    />
+                    <i class="fa-solid fa-lock"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="nextbtn">Next Step</button>
+              </div>
+            </div>
+            <div class="form-step" id="step2">
+              <div class="title-text">
+                <h4>Personal Details</h4>
+              </div>
+              <div class="input-set">
+                <div class="input-group">
+                  <label for="address">Address</label>
+                  <div class="input-box">
+                    <input
+                      type="text"
+                      placeholder="Address"
+                      id="address"
+                      name="address"
+                      required
+                    />
+                    <i class="fa-solid fa-house"></i>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label>Gender</label>
+
+                  <div class="input-radio">
+                    <label for="male"
+                      ><input
+                        type="radio"
+                        value="male"
+                        id="male"
+                        name="gender"
+                        required
+                      />Male</label
+                    ><br />
+
+                    <label for="female">
+                      <input
+                        type="radio"
+                        value="female"
+                        id="female"
+                        name="gender"
+                        required
+                      />Female</label
+                    ><br />
+
+                    <label for="other">
+                      <input
+                        type="radio"
+                        value="other"
+                        id="other"
+                        name="gender"
+                        required
+                      />Other</label
+                    ><br />
+                  </div>
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="prebtn">Previous Step</button>
+                <button class="nextbtn">Next Step</button>
+              </div>
+            </div>
+            <div class="form-step" id="step3">
+              <div class="title-text">
+                <h4>Personal Details</h4>
+              </div>
+              <div class="input-set">
+                <div class="input-group">
+                  <label>Hobbie</label>
+
+                  <div class="input-checkbox">
+                    <label for="football"
+                      ><input
+                        type="checkbox"
+                        value="football"
+                        id="football"
+                        required
+                        name="hobbie"
+                      />Football</label
+                    ><br />
+
+                    <label for="cricket">
+                      <input
+                        type="checkbox"
+                        value="cricket"
+                        id="cricket"
+                        name="hobbie"
+                        required
+                      />Cricket</label
+                    ><br />
+                    <label for="gaming">
+                      <input
+                        type="checkbox"
+                        value="gaming"
+                        name="hobbie"
+                        id="gaming"
+                        required
+                      />Gaming</label
+                    ><br />
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="textarea">Tell about yourself</label>
+                  <textarea
+                    name="textarea"
+                    rows="5"
+                    id="textarea"
+                    placeholder="Write about yourself"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="prebtn">Previous Step</button>
+                <button class="nextbtn">Next Step</button>
+              </div>
+            </div>
+            <div class="form-step" id="step4">
+              <div class="form-submit">
+                <i class="fa-solid fa-check"></i>
+                <h4>Submit your form</h4>
+                <p>
+                  Please review all the information you previously typed in the
+                  past steps, and if all is okay, submit your message to receive
+                  a project quote in 24 - 48 hours.
+                </p>
+                <button class="subbtn" type="button" onclick="handleSubmitForm()">Submit</button>
+              </div>
+              <div class="button-group">
+                <button class="prebtn">Previous Step</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
