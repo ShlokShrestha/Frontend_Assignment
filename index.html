@@ -22,7 +22,8 @@
             Please fill the form below to receive a quote for your project.<br />
             Feel free to add as much detail as needed.
           </p>
-          <form action="#" class="form" >
+          <form action="#" class="form">
+            <!-- progress bar -->
             <div class="progress-bar">
               <div class="progress" id="progress"></div>
               <div class="progress-step progress-step-active">1</div>
@@ -209,6 +210,7 @@
                 <button class="nextbtn">Next Step</button>
               </div>
             </div>
+            <!-- submit form -->
             <div class="form-step" id="step4">
               <div class="form-submit">
                 <i class="fa-solid fa-check"></i>
@@ -218,7 +220,13 @@
                   past steps, and if all is okay, submit your message to receive
                   a project quote in 24 - 48 hours.
                 </p>
-                <button class="subbtn" type="button" onclick="handleSubmitForm()">Submit</button>
+                <button
+                  class="subbtn"
+                  type="button"
+                  onclick="handleSubmitForm()"
+                >
+                  Submit
+                </button>
               </div>
               <div class="button-group">
                 <button class="prebtn">Previous Step</button>

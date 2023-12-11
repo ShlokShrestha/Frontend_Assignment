@@ -66,6 +66,9 @@ function validateStep(step) {
         alert(`Please select a value for ${input.name}.`);
         return false;
       }
+    } else if (input.id === "email" && !isValidEmail(input.value)) {
+      alert("Please enter a valid email address.");
+      return false;
     } else if (!input.checkValidity()) {
       alert(
         `Invalid ${input.labels[0].textContent}. Please correct and try again.`
@@ -93,7 +96,13 @@ function isValidPhoneNumber(phone) {
   const phoneRegex = /^\d{10}$/;
   return phoneRegex.test(phone);
 }
+//form-validation for email
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
 
+//Form after submit it store in local storage
 function handleSubmitForm() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
@@ -103,17 +112,14 @@ function handleSubmitForm() {
   const aboutme = document.getElementById("textarea").value;
   const gender = document.getElementsByName("gender");
   let selectedGender = "";
-
   for (const option of gender) {
     if (option.checked) {
       selectedGender = option.value;
       break;
     }
   }
-
   const hobby = document.getElementsByName("hobbie");
   const selectedHobbie = [];
-
   for (const checkbox of hobby) {
     if (checkbox.checked) {
       selectedHobbie.push(checkbox.value);
