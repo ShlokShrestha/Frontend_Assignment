@@ -36,23 +36,22 @@
 }
 .container-item > h2 {
   text-align: center;
-  /* font-size: 32px; */
-  font-size: clamp(25px, 5vw, 36px);
+  font-size: clamp(24px, 5vw, 36px);
   margin-bottom: 10px;
 }
 .container-item > p {
   text-align: center;
-  font-size: clamp(14px, 5vw, 17px);
+  padding: 0 1rem;
+  font-size: clamp(12px, 5vw, 18px);
 }
 
 /* form-css */
 .form {
-  margin: 3rem 1rem;
+  margin: 2rem 1rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 1.5rem;
   padding: 1rem 3rem;
   width: calc(100%-50px);
-  /* width: minwidth(50%, 500px); */
   border: 1px solid black;
 }
 
